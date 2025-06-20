@@ -1,0 +1,26 @@
+{
+  "name": "js-ai-buildathon",
+  "version": "1.0.0",
+  "description": "> To reset your progress and select a different quest, click this button:\r >\r > [![Reset Progress](https://img.shields.io/badge/Reset--Progress-ff3860?logo=mattermost)](../../issues/new?title=Reset+Progress:+Back+to+Welcome&labels=reset&body=🔄+I+want+to+reset+my+progress+and+go+back+to+the+Welcome+page.%0A%0A**Please+wait+about+15+seconds.+Your+progress+will+be+reset,+this+issue+will+automatically+close,+and+you+will+be+taken+back+to+the+Welcome+page+to+select+a+new+quest.**)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Davedave001/js-ai-buildathon.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Davedave001/js-ai-buildathon/issues"
+  },
+  "homepage": "https://github.com/Davedave001/js-ai-buildathon#readme",
+  "type": "module",
+  "dependencies": {
+    "@azure-rest/ai-inference": "^1.0.0-beta.6",
+    "@azure/core-auth": "latest",
+    "@azure/core-sse": "latest"
+  }
+}
