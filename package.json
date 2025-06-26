@@ -19,8 +19,9 @@
   "homepage": "https://github.com/Davedave001/js-ai-buildathon#readme",
   "type": "module",
   "dependencies": {
-    "@azure-rest/ai-inference": "^1.0.0-beta.6",
+    "@azure-rest/ai-inference": "latest",
     "@azure/core-auth": "latest",
-    "@azure/core-sse": "latest"
+    "@azure/core-sse": "latest",
+    "dotenv": "^16.5.0"
   }
 }
