@@ -403,3 +403,6 @@ FodyWeavers.xsd
 # Environment variables
 .env
 .azure
+
+# Ignore agent configuration files containing sensitive info
+**/my-agent.agent.yaml
