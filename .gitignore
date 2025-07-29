@@ -406,3 +406,7 @@ FodyWeavers.xsd
 
 # Ignore agent configuration files containing sensitive info
 **/my-agent.agent.yaml
+
+genaiscript.d.ts
+tsconfig.json
+jsconfig.json
