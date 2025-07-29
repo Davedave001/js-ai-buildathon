@@ -1,57 +1,121 @@
 
 
-<!-- readme -->
+# ⚙️ Quest: I want to automate code reviews
 
-# 🎉 Welcome to the JS AI Build-a-thon!
+> To reset your progress and select a different quest, click this button:
+>
+> [![Reset Progess](https://img.shields.io/badge/Reset--Progress-ff3860?logo=mattermost)](../../issues/new?title=Reset+Quest&labels=reset-quest&body=🔄+I+want+to+reset+my+AI+learning+quest+and+start+from+the+beginning.%0A%0A**Please+click+on+Create+below,+then+wait+about+15+seconds.+Your+progress+will+be+reset,+this+issue+will+automatically+close,+and+you+will+be+taken+back+to+the+Welcome+step+to+select+a+new+quest.**)
 
-This is a hands-on experience designed for you to work through a series of quests, each designed to guide you through the process of building AI apps step by step.
+## 📋 Pre-requisites
 
-🧠 Concepts you will cover include:-
+1. A GitHub account
+2. [Visual Studio Code](https://code.visualstudio.com/) installed
+3. [Node.js](https://nodejs.org/en) installed
 
-- GitHub Models
-- Azure AI Foundry VS Code Extension
-- Azure AI Foundry Portal
-- AI Toolkit VS Code Extension
-- Azure Developer CLI (azd)
-- Express.js
-- Vite, Lit
-- LangChain.js
-- Azure AI Agents Service
-- MCP Tools
-- Automation with GenAIScript
+## 📝 Overview
 
-## 🗺️ How it works
+> [!IMPORTANT]  
+> If you have done the previous quest, ensure you pull your changes from GitHub using `git pull` before continuing with this project to update the project README.
 
-This build-a-thon is organized into **quests** — choose the one that matches your goals and click its badge to begin.
+You will build an **automated code review system** that uses AI to analyze code changes and provide feedback. This system will help you ensure that your code meets the quality standards best practices of your project, while also learning how to use AI to automate some of your development tasks.
 
-Each quest has a required activity (e.g., push code). After you complete it, **GitHub Actions** will automatically unlock your next step.
+## 🧠 Use GenAIScript in VS Code
 
-**Tips:**  
-⭐ **Recommended path**⭐ Start with the first quest and go in order for the **best** learning experience.  
+[GenAIScript](https://microsoft.github.io/genaiscript/) is an extension of the JavaScript language that allows you to write scripts that can interact with AI models. You can create advanced AI agents and workflows in very few lines of code, making it easier to build AI applications. It comes with a Command Line Interface (CLI) that allows you to run scripts, and a Visual Studio Code extension that provides an interactive editor for writing and running your scripts.
 
-🔄 To restart, click the **Reset** button at the top of any page.
+Let's start by installing the GenAIScript extension in Visual Studio Code:
 
+1. Click on the **Extensions** icon in the left sidebar of Visual Studio Code, search for **GenAIScript** and **install**.
 
-## ✅ Activity: Select a quest
+2. After installation, you will see a new **GenAIScript** icon in the left sidebar and also in the status bar at the bottom of the window. Click on the **GenAIScript** icon in the status bar and select **Start GenAIScript server**.
 
-Click on a quest and follow the instructions to get started.
+3. It will take some time to start the server, as it first install all the required dependencies.
 
-[![Static Badge](https://img.shields.io/badge/Quest-I_want_to_build_a_local_GenAI_prototype-green)](../../issues/new?title=Quest:+I+want+to+build+a+local+GenAI+prototype&labels=quest&body=🚀+I%27m+ready+to+build+my+first+local+GenAI+prototype%21+Let%27s+get+started+with+AI+in+JavaScript%21%0A%0A**Please+wait+about+15+seconds.+This+issue+will+automatically+close+and+the+README+will+update+with+your+next+instructions.**)
+### Set up GitHub token
 
-[![Static Badge](https://img.shields.io/badge/Quest-I_want_to_move_my_prototype_to_Azure-orange)](../../issues/new?title=Quest:+I+have+a+prototype.+Let's+move+to+Azure&labels=quest&body=☁️+Time+to+take+my+AI+prototype+to+the+cloud%21+Excited+to+deploy+on+Azure+and+scale+up%21%0A%0A**Please+wait+about+15+seconds.+This+issue+will+automatically+close+and+the+README+will+update+with+your+next+instructions.**)
+To use GenAIScript with GitHub Models, you need to set up a GitHub token.
 
-[![Static Badge](https://img.shields.io/badge/Quest-I_want_to_add_a_simple_chat_interface_to_my_app-blue)](../../issues/new?title=Quest:+I+want+to+add+a+simple+chat+interface&labels=quest&body=%F0%9F%92%AC+Let%27s+add+a+chat+interface+and+make+my+AI+app+interactive%21+Ready+for+some+real-time+conversations%21%0A%0A**Please+wait+about+15+seconds.+This+issue+will+automatically+close+and+the+README+will+update+with+your+next+instructions.**)
+1. Open [this link](https://github.com/marketplace/models/azure-openai/gpt-4-1/playground) in a new tab and click on the **Use this model** button.
 
-[![Static Badge](https://img.shields.io/badge/Quest-I_want_to_integrate_external_data_using_RAG-purple)](../../issues/new?title=Quest:+I+want+to+create+my+first+AI+app+with+RAG&labels=quest&body=%F0%9F%93%9A+I%27m+diving+into+RAG+and+building+my+first+retrieval-augmented+AI+app%21+Let%27s+do+this%21%0A%0A**Please+wait+about+15+seconds.+This+issue+will+automatically+close+and+the+README+will+update+with+your+next+instructions.**)
+    ![Use model](https://github.com/Azure-Samples/JS-AI-Build-a-thon/blob/assets/jsai-buildathon-assets/use-gh-model.png?raw=true)
 
-[![Static Badge](https://img.shields.io/badge/Quest-I_want_to_explore_frameworks-yellow)](../../issues/new?title=Quest:+I+want+to+explore+frameworks&labels=quest&body=🛠️+Let%27s+explore+frameworks+and+build+something+amazing%21+Excited+to+learn+and+experiment%21%0A%0A**Please+wait+about+15+seconds.+This+issue+will+automatically+close+and+the+README+will+update+with+your+next+instructions.**)
+    Follow the instructions provided to get a free developer key, named Personal Access Token (classic).
 
-[![Static Badge](https://img.shields.io/badge/Quest-I_want_to_build_an_AI_Agent-violet)](../../issues/new?title=Quest:+I+want+to+build+an+agent&labels=quest&body=%F0%9F%A4%96+Let%27s+build+an+AI+agent+that+can+help+and+interact+with+users%21+Excited+for+this+step%21%0A%0A**Please+wait+about+15+seconds.+This+issue+will+automatically+close+and+the+README+will+update+with+your+next+instructions.**)
+2. Create a new file in your project root called `.env` and add the following line:
 
-[![Static Badge](https://img.shields.io/badge/Quest-I_want_to_use_MCP_tools-cyan)](../../issues/new?title=Quest:+I+want+to+use+MCP+tools&labels=quest&body=🔧+Time+to+dive+into+MCP+tools%21+Let%27s+get+started%21%0A%0A**Please+wait+about+15+seconds.+This+issue+will+automatically+close+and+the+README+will+update+with+your+next+instructions.**)
+    ```text
+    GITHUB_TOKEN=<your_github_token_here>
+    ```
 
-[![Static Badge](https://img.shields.io/badge/Quest-I_want_to_automate_code_reviews-crimson)](../../issues/new?title=Quest:+I+want+to+automate+code+reviews&labels=quest&body=📄+Let%27s+use+AI+to+review+your+code%21%0A%0A**Please+click+on+Create+below,+then+wait+about+15+seconds.+This+issue+will+automatically+close+and+the+README+will+update+with+your+next+instructions.**)
+## ✅ Activity: Create a code review script
 
-[![Static Badge](https://img.shields.io/badge/Quest-I_want_to_create_templates-pink)](../../issues/new?title=Quest:+I+want+to+create+templates&labels=quest&body=📄+Let%27s+create+templates+to+streamline+future+projects%21+Excited+to+design+and+build%21%0A%0A**Please+wait+about+15+seconds.+This+issue+will+automatically+close+and+the+README+will+update+with+your+next+instructions.**)
+Now that you have GenAIScript installed, let's create a script that will analyze code changes and provide feedback.
+
+1. Create a new file in your project directory called `code-review.genai.js`.
+
+2. Open the file and add the following code:
+
+```javascript
+const changes = await git.diff({ staged: true });
+
+defDiff("CODE_CHANGES", changes);
+
+$`## Role
+You are a senior developer whose job is to review code changes and provide meaningful feedback.
+
+## Task
+Review <CODE_CHANGES>, point out possible mistakes or bad practices, and provide suggestions for improvement.
+- Be specific about what's wrong and why it's wrong
+- Reference proper coding standards and best practices
+- Be brief to get your point across
+`;
+```
+
+Let's break down what this script does:
+- It uses the `git.diff()` function to get the staged changes in your Git repository.
+- The `defDiff()` function defines a variable `CODE_CHANGES` that contains the code changes, to provide context to the AI model.
+- The `$` template literal is used to define the prompt AI model. It instructs the model to review the code changes, point out mistakes, and provide suggestions for improvement.
+
+### Test the code review script
+
+Open the terminal in Visual Studio Code and run the following command to add some changes to your Git repository:
+
+```bash
+git add .
+```
+
+Then while your `code-review.genai.js` file is open, select the **Run GenAIScript** button at the top right corner of the editor, or use the command palette (Ctrl+Shift+P) and type `GenAIScript: Run Script`.
+
+![Run GenAIScript button](https://github.com/Azure-Samples/JS-AI-Build-a-thon/blob/assets/jsai-buildathon-assets/run-genaiscript.png?raw=true)
+
+You should then see a new tab open with the AI's code review feedback. It should point out a few things since the model has no knowledge of GenAIScript here, but you can use this as a starting point. Experiment with tweaking the prompt to get more specific feedback based on your coding standards and practices.
+
+### Quest Checklist
+
+To complete this quest and **AUTOMATICALLY UPDATE** your progress, you MUST push your code to the repository as described below.
+
+**Checklist**
+- [ ] Have a `code-review.genai.js` file at the root of your project
+
+1. In the terminal, run the following commands to add, commit, and push your changes to the repository:
+
+    ```bash
+    git add .
+    git commit -m "Add code review script"
+    git push
+    ```
+
+2.  After pushing your changes, **WAIT ABOUT 15 SECONDS FOR GITHUB ACTIONS TO UPDATE YOUR README**.
+
+> To skip this quest and select a different one, click this button:
+>
+> [![Skip to another quest](https://img.shields.io/badge/Skip--to--another--quest-ff3860?logo=mattermost)](../../issues/new?title=Skip+quest&labels=reset-quest&body=🔄+I+want+to+reset+my+AI+learning+quest+and+start+from+the+beginning.%0A%0A**Please+wait+about+15+seconds.+Your+progress+will+be+reset,+this+issue+will+automatically+close,+and+you+will+be+taken+back+to+the+Welcome+step+to+select+a+new+quest.**)
+
+## 📚 Further Reading
+
+Here are some additional resources to help you learn more about GenAIScript:
+
+- [More automation ideas with GenAIScript sample collection](https://microsoft.github.io/genaiscript/samples/)
+- [Learn about Generative AI with JavaScript on YouTube](https://aka.ms/genai-js)
 
 
